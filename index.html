@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>🌸 Chúc Mừng Karquynn Nhận Việc Mới | A Sweet Milestone ✨</title>
+  
+  <!-- Google Fonts: Quicksand, Playfair Display, Dancing Script -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600;700&family=Playfair+Display:ital,wght@0,600;0,700;1,500&family=Quicksand:wght@400;500;600;700&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Canvas hiệu ứng cánh hoa đào và ánh sao rơi -->
+  <canvas id="petal-canvas"></canvas>
+
+  <!-- Hộp phát nhạc du dương & nút điều khiển -->
+  <div class="music-controller" id="musicController" title="Bật/Tắt hộp nhạc dịu êm">
+    <div class="vinyl-disc" id="vinylDisc">
+      <div class="vinyl-center">🌸</div>
+    </div>
+    <span class="music-label" id="musicLabel">Hộp nhạc dịu êm</span>
+  </div>
+
+  <!-- ==================== MÀN MỞ ĐẦU: PHONG BÌ THƯ BÍ MẬT ==================== -->
+  <div class="envelope-overlay" id="envelopeOverlay">
+    <div class="envelope-wrapper">
+      <div class="floating-sparkles-intro">✨ 💖 🌸</div>
+      
+      <div class="envelope" id="envelopeCard">
+        <div class="envelope-flap"></div>
+        <div class="envelope-pocket"></div>
+        
+        <!-- Con dấu sáp trái tim -->
+        <div class="wax-seal" id="waxSeal" title="Nhấn để mở thư!">
+          <div class="wax-seal-inner">
+            <span class="wax-heart">💌</span>
+          </div>
+        </div>
+
+        <div class="letter-peek">
+          <p class="peek-title">Gửi Karquynn - Cô gái tuyệt vời nhất hôm nay...</p>
+        </div>
+      </div>
+
+      <div class="envelope-instruction">
+        <p class="instruction-text">Một món quà chúc mừng gửi riêng đến Karquynn 🌷</p>
+        <button class="open-btn" id="openBtn">
+          <span>Mở thư chúc mừng</span>
+          <span class="btn-sparkle">✨</span>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==================== TRANG CHÍNH: CELEBRATION PAGE ==================== -->
+  <main class="main-container" id="mainContent">
+
+    <!-- Hero Header -->
+    <header class="hero-section">
+      <div class="tag-badge">
+        <span class="badge-icon">🎀</span>
+        <span class="badge-text">New Job Celebration • Bước Ngoặt Rực Rỡ</span>
+      </div>
+
+      <h1 class="main-title">
+        Chúc Mừng <span class="highlight-text" id="recipientName">Karquynn</span> Đã Nhận Việc Mới!
+      </h1>
+      
+      <p class="sub-title">
+        “Mọi buổi phỏng vấn, những đêm chuẩn bị kỹ lưỡng và sự kiên trì của Karquynn đều đã nở hoa rực rỡ!” 🌸
+      </p>
+
+      <!-- Thanh chuyển đổi kiểu hiển thị Scrapbook / Phong cách ảnh -->
+      <div class="layout-switcher">
+        <button class="switch-btn active" data-style="polaroid">
+          <span class="btn-icon">📷</span> Polaroid Scrapbook
+        </button>
+        <button class="switch-btn" data-style="split">
+          <span class="btn-icon">🪞</span> Khung Kính Song Hành
+        </button>
+        <button class="switch-btn" data-style="ribbon">
+          <span class="btn-icon">🎀</span> Nơ Ruy Băng Đôi
+        </button>
+      </div>
+    </header>
+
+    <!-- ==================== KHU VỰC GHÉP 2 HÌNH ẢNH (POLAROID SCRAPBOOK) ==================== -->
+    <section class="photo-gallery-section" id="photoGallery">
+      <div class="photo-display-container style-polaroid" id="photoContainer">
+        
+        <!-- Bức ảnh thứ 1 -->
+        <div class="photo-card card-one" id="cardOne">
+          <!-- Băng dính Washi hoa nhí -->
+          <div class="washi-tape tape-left"></div>
+          
+          <div class="photo-frame">
+            <img src="photo1.jpg" alt="Karquynn nỗ lực" class="polaroid-img" id="img1">
+            <div class="photo-gloss"></div>
+          </div>
+          
+          <div class="photo-caption">
+            <span class="caption-handwritten" id="captionText1">Từng ngày nỗ lực bền bỉ 🌷</span>
+            <span class="caption-tag">#chăm_chỉ #cô_gái_kiên_cường</span>
+          </div>
+          <div class="card-sticker sticker-flower">🌸</div>
+        </div>
+
+        <!-- Trái tim ruy băng kết nối ở giữa -->
+        <div class="connecting-bridge" id="connectingBridge">
+          <div class="ribbon-bow">
+            <span class="bow-center">💖</span>
+          </div>
+          <div class="bridge-sparkles">✨</div>
+        </div>
+
+        <!-- Bức ảnh thứ 2 -->
+        <div class="photo-card card-two" id="cardTwo">
+          <!-- Băng dính Washi hoa nhí -->
+          <div class="washi-tape tape-right"></div>
+          
+          <div class="photo-frame">
+            <img src="photo2.jpg" alt="Karquynn tỏa sáng" class="polaroid-img" id="img2">
+            <div class="photo-gloss"></div>
+          </div>
+          
+          <div class="photo-caption">
+            <span class="caption-handwritten" id="captionText2">Chào đón vị trí mới xứng đáng! 🎉</span>
+            <span class="caption-tag">#official_offer #toả_sáng</span>
+          </div>
+          <div class="card-sticker sticker-star">⭐</div>
+        </div>
+
+      </div>
+
+      <p class="photo-hint">💡 <em>Mẹo nhỏ: Nhấn vào từng bức ảnh để ngắm nhìn kỷ niệm thật rõ nhé!</em></p>
+    </section>
+
+    <!-- ==================== BỨC THƯ TÂM TÌNH DÀNH CHO KARQUYNN ==================== -->
+    <section class="letter-section">
+      <div class="letter-paper">
+        <div class="letter-pin">📌</div>
+        <div class="letter-header">
+          <span class="letter-date" id="letterDate">Một cột mốc mới thật đáng tự hào 💐</span>
+          <h2 class="letter-greeting">Gửi Karquynn thân thương,</h2>
+        </div>
+
+        <div class="letter-body" id="letterBodyContent">
+          <p>
+            Nhận được tin Karquynn chính thức có công việc mới, tớ vừa thấy vui lây lại vừa xúc động vô cùng!
+          </p>
+          <p>
+            Để cầm trên tay kết quả ngọt ngào ngày hôm nay, tớ biết Karquynn đã phải trải qua những ngày hồi hộp chuẩn bị, chăm chút từng dòng CV, những buổi phỏng vấn đòi hỏi sự bình tĩnh và cả những âu lo không tên. Nhưng sau tất cả, tài năng, năng lượng tích cực và sự chuẩn bị chu đáo của Karquynn đã thuyết phục được tất cả mọi người.
+          </p>
+          <p class="letter-quote">
+            “Công việc mới này không chỉ là một vị trí làm việc, mà là bước đệm rực rỡ để Karquynn tự tin tỏa sáng rạng ngời hơn nữa!”
+          </p>
+          <p>
+            Chúc Karquynn bước vào môi trường mới sẽ gặp được những người đồng nghiệp dễ mến, công việc suôn sẻ, luôn giữ được nụ cười tươi tắn và năng lượng ngọt ngào này nhé. Karquynn giỏi lắm đấy! 🌷✨
+          </p>
+        </div>
+
+        <div class="letter-footer">
+          <div class="letter-signature">
+            <span>Luôn tự hào và dõi theo Karquynn,</span>
+            <strong class="signature-name" id="senderName">Người bạn luôn ủng hộ cậu 💐</strong>
+          </div>
+          <button class="edit-letter-btn" id="editLetterBtn" title="Chỉnh sửa nội dung thư">
+            ✏️ Tùy chỉnh lời chúc
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== HUY HIỆU TÔN VINH ĐÁNG YÊU CHO CÔNG VIỆC MỚI ==================== -->
+    <section class="badges-section">
+      <h3 class="section-title">✨ Bộ Sưu Tập Huy Hiệu Dành Cho Karquynn ✨</h3>
+      <div class="badges-grid">
+        
+        <div class="badge-card">
+          <div class="badge-icon-box">💼</div>
+          <h4>Official Offer</h4>
+          <p>Vượt qua mọi thử thách để chạm tay tới vị trí mơ ước</p>
+        </div>
+
+        <div class="badge-card">
+          <div class="badge-icon-box">🌟</div>
+          <h4>100% Nỗ Lực</h4>
+          <p>Chuẩn bị kỹ lưỡng và luôn kiên định với mục tiêu</p>
+        </div>
+
+        <div class="badge-card">
+          <div class="badge-icon-box">🌷</div>
+          <h4>Dịu Dàng & Bản Lĩnh</h4>
+          <p>Vừa ngọt ngào lại vừa chuyên nghiệp, tài năng</p>
+        </div>
+
+        <div class="badge-card">
+          <div class="badge-icon-box">🚀</div>
+          <h4>Khởi Đầu Rực Rỡ</h4>
+          <p>Mở ra hành trình sự nghiệp thăng hoa và nhiều niềm vui</p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==================== HÀNH TRÌNH CHINH PHỤC CỦA KARQUYNN ==================== -->
+    <section class="journey-checklist-section">
+      <div class="checklist-card">
+        <div class="washi-tape-top"></div>
+        <h3 class="section-title-sm">🌷 Hành Trình Chạm Tới Thành Công Của Karquynn</h3>
+        <p class="section-subtitle-sm">Mỗi dấu tích là một minh chứng cho sự kiên trì tuyệt vời</p>
+        
+        <ul class="journey-list">
+          <li class="journey-item completed">
+            <span class="custom-check">✔</span>
+            <span class="journey-text">Chăm chút từng dòng CV xinh xắn & chuyên nghiệp 📄✨</span>
+          </li>
+          <li class="journey-item completed">
+            <span class="custom-check">✔</span>
+            <span class="journey-text">Vượt qua các vòng phỏng vấn với nụ cười tự tin 🌸💬</span>
+          </li>
+          <li class="journey-item completed">
+            <span class="custom-check">✔</span>
+            <span class="journey-text">Cầm trên tay thông báo trúng tuyển (Official Offer) 💌🎉</span>
+          </li>
+          <li class="journey-item completed">
+            <span class="custom-check">✔</span>
+            <span class="journey-text">Tự thưởng một bữa ăn mừng & trà sữa ngọt ngào 🍰🧋</span>
+          </li>
+          <li class="journey-item interactive-item" id="firstDayCheckItem">
+            <span class="custom-check" id="checkIcon">◻</span>
+            <span class="journey-text"><strong>Sẵn sàng toả sáng ở vị trí công việc mới!</strong> 🚀💖 (Nhấn để tích)</span>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ==================== HỘP QUÀ THÔNG ĐIỆP MAY MẮN MỖI NGÀY ==================== -->
+    <section class="fortune-card-section">
+      <div class="fortune-container">
+        <div class="fortune-prompt">
+          <span class="fortune-tag">🎁 Lucky Career Card</span>
+          <h3>Rút Một Thông Điệp May Mắn Cho Công Việc Mới</h3>
+          <p>Mỗi lần chạm vào lá bài, một nguồn năng lượng tích cực sẽ tiếp thêm sức mạnh cho Karquynn:</p>
+        </div>
+
+        <div class="card-flip-wrapper" id="fortuneCardWrapper">
+          <div class="fortune-card-inner" id="fortuneCardInner">
+            <!-- Mặt sau (khi chưa lật) -->
+            <div class="fortune-card-face card-back">
+              <div class="card-back-pattern">
+                <span class="card-icon-big">🎀</span>
+                <span class="card-back-text">Nhấn để lật bài ✨</span>
+              </div>
+            </div>
+            <!-- Mặt trước (nội dung thông điệp) -->
+            <div class="fortune-card-face card-front">
+              <span class="fortune-flower">🌸</span>
+              <p class="fortune-message" id="fortuneMessage">
+                “Karquynn hãy tự tin nhé! Sự chân thành, thông minh và dịu dàng của cậu sẽ chinh phục tất cả mọi người ở môi trường mới!”
+              </p>
+              <button class="draw-again-btn" id="drawAgainBtn">Rút thông điệp khác 🔄</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== BẢNG LỜI CHÚC DÁN GIẤY PASTEL (WISHES WALL) ==================== -->
+    <section class="wishes-board-section">
+      <div class="board-header">
+        <h3 class="section-title">📌 Bảng Lời Chúc Gửi Trao Karquynn</h3>
+        <p class="board-desc">Dán thêm những lời chúc yêu thương hoặc lời nhắn nhủ dành riêng cho Karquynn nhé!</p>
+      </div>
+
+      <div class="wishes-grid" id="wishesGrid">
+        <!-- Sticky Note 1 -->
+        <div class="sticky-note note-pink">
+          <div class="note-pin">📍</div>
+          <p class="note-text">“Chúc Karquynn ngày đầu đi làm thật nhiều niềm vui, đồng nghiệp dễ thương hết nấc!”</p>
+          <span class="note-author">— Người bạn thân 🌸</span>
+        </div>
+
+        <!-- Sticky Note 2 -->
+        <div class="sticky-note note-yellow">
+          <div class="note-pin">📍</div>
+          <p class="note-text">“Tự hào về Karquynn vô cùng! Cậu siêu giỏi và xứng đáng với tất cả thành quả này!”</p>
+          <span class="note-author">— Cổ động viên nhiệt thành ✨</span>
+        </div>
+
+        <!-- Sticky Note 3 -->
+        <div class="sticky-note note-green">
+          <div class="note-pin">📍</div>
+          <p class="note-text">“Tháng lương đầu tiên nhớ đi ăn lẩu ăn mừng nha cô gái xinh đẹp! 🧋🍲”</p>
+          <span class="note-author">— Đội ăn uống 💖</span>
+        </div>
+      </div>
+
+      <!-- Khung thêm lời chúc mới -->
+      <div class="add-wish-box">
+        <input type="text" id="newWishInput" placeholder="Viết lời nhắn gửi Karquynn... (Ví dụ: Chúc cậu luôn cười tươi!)" maxlength="120">
+        <input type="text" id="newWishAuthor" placeholder="Tên cậu" maxlength="25">
+        <button class="add-wish-btn" id="addWishBtn">Dán lên bảng 💌</button>
+      </div>
+    </section>
+
+    <!-- ==================== TƯƠNG TÁC: GỬI TRIỆU LỜI KHEN CHO KARQUYNN ==================== -->
+    <section class="interactive-cheer-section">
+      <div class="cheer-card">
+        <h3>Gửi Thêm Triệu Cái Ôm & Lời Chúc Đến Karquynn 💌</h3>
+        <p>Mỗi lần nhấn nút, những đóa hoa pastel và lời chúc may mắn sẽ bay đến cậu:</p>
+        
+        <button class="heart-blast-btn" id="heartBlastBtn">
+          <span class="btn-heart-icon">💖</span>
+          <span class="btn-text">Chúc mừng Karquynn!</span>
+        </button>
+
+        <div class="cheer-counter-box">
+          <span class="counter-text">Đã gửi trao: </span>
+          <span class="counter-number" id="cheerCounter">999</span>
+          <span class="counter-unit">trái tim & lời chúc may mắn 🌸</span>
+        </div>
+
+        <!-- Popup lời chúc ngẫu nhiên ngọt ngào -->
+        <div class="cheer-toast" id="cheerToast"></div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="page-footer">
+      <p>Dành riêng cho cô gái xinh đẹp & tài năng <strong>Karquynn</strong> 🌷 | Made with love & sparkles ✨</p>
+    </footer>
+
+  </main>
+
+  <!-- ==================== MODAL PHÓNG TO ẢNH (LIGHTBOX) ==================== -->
+  <div class="lightbox-modal" id="lightboxModal">
+    <div class="lightbox-overlay" id="lightboxOverlay"></div>
+    <div class="lightbox-content">
+      <button class="lightbox-close" id="lightboxClose">✕</button>
+      <img src="" alt="Phóng to" id="lightboxImg">
+      <p class="lightbox-caption" id="lightboxCaption"></p>
+    </div>
+  </div>
+
+  <!-- ==================== MODAL CHỈNH SỬA LỜI CHÚC ==================== -->
+  <div class="edit-modal" id="editModal">
+    <div class="edit-modal-content">
+      <div class="edit-modal-header">
+        <h3>✏️ Chỉnh Sửa Lời Chúc Cho Karquynn</h3>
+        <button class="edit-close-btn" id="closeEditModal">✕</button>
+      </div>
+      <div class="edit-form-group">
+        <label>Tên người nhận:</label>
+        <input type="text" id="inputRecipient" value="Karquynn">
+      </div>
+      <div class="edit-form-group">
+        <label>Chú thích ảnh 1:</label>
+        <input type="text" id="inputCaption1" value="Từng ngày nỗ lực bền bỉ 🌷">
+      </div>
+      <div class="edit-form-group">
+        <label>Chú thích ảnh 2:</label>
+        <input type="text" id="inputCaption2" value="Chào đón vị trí mới xứng đáng! 🎉">
+      </div>
+      <div class="edit-form-group">
+        <label>Nội dung thư chúc mừng:</label>
+        <textarea id="inputTextLetter" rows="5"></textarea>
+      </div>
+      <div class="edit-form-group">
+        <label>Chữ ký người gửi:</label>
+        <input type="text" id="inputSender" value="Người bạn luôn ủng hộ cậu 💐">
+      </div>
+      <div class="edit-actions">
+        <button class="save-edit-btn" id="saveEditBtn">Lưu & Áp Dụng Ngay ✨</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
