@@ -263,7 +263,7 @@ document.addEventListener('DOMContentLoaded', () => {
     "Xinh đẹp, giỏi giang, 10 điểm không có nhưng! ✨",
     "Khởi đầu mới thuận buồm xuôi gió! 🚀",
     "Đồng nghiệp ai cũng quý mến Karquynn! 🌷",
-    "Mọi nỗ lực của cậu đều nở hoa rực rỡ! 🎀",
+    "Mọi nỗ lực của Karquynn đều nở hoa rực rỡ! 🎀",
     "Karquynn là cô gái tuyệt vời nhất hôm nay! 👑",
     "Tự tin tỏa sáng trên con đường mới nhé! 💼"
   ];
@@ -444,10 +444,10 @@ document.addEventListener('DOMContentLoaded', () => {
   const drawAgainBtn = document.getElementById('drawAgainBtn');
 
   const fortuneList = [
-    "“Karquynn hãy tự tin nhé! Sự chân thành, thông minh và dịu dàng của cậu sẽ chinh phục tất cả mọi người ở môi trường mới!” 🌸",
+    "“Karquynn hãy tự tin nhé! Sự chân thành, thông minh và dịu dàng của Karquynn sẽ chinh phục tất cả mọi người ở môi trường mới!” 🌸",
     "“Mỗi ngày đi làm là một niềm vui mới. Karquynn sẽ học hỏi nhanh chóng và sớm gặt hái nhiều thành công rực rỡ!” ✨",
     "“Đồng nghiệp mới sẽ cực kỳ quý mến nụ cười và tinh thần nhiệt huyết của Karquynn!” 💖",
-    "“Cậu đã rất xuất sắc khi giành được vị trí này, cứ ngẩng cao đầu và vững bước nhé!” 👑",
+    "“Karquynn đã rất xuất sắc khi giành được vị trí này, cứ ngẩng cao đầu và vững bước nhé!” 👑",
     "“May mắn và thuận lợi sẽ luôn đồng hành cùng Karquynn trên mọi dự án sắp tới!” 🍀💼"
   ];
 
